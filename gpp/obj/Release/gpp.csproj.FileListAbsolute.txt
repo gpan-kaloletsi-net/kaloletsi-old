@@ -1,0 +1,7 @@
+C:\edata\Projects.CLR\Gpan.Site\gpp\bin\gpp.dll
+C:\edata\Projects.CLR\Gpan.Site\gpp\bin\gpp.pdb
+C:\edata\Projects.CLR\Gpan.Site\gpp\obj\Release\gpp.csprojResolveAssemblyReference.cache
+C:\edata\Projects.CLR\Gpan.Site\gpp\obj\Release\gpp.Properties.Resources.resources
+C:\edata\Projects.CLR\Gpan.Site\gpp\obj\Release\gpp.csproj.GenerateResource.Cache
+C:\edata\Projects.CLR\Gpan.Site\gpp\obj\Release\gpp.dll
+C:\edata\Projects.CLR\Gpan.Site\gpp\obj\Release\gpp.pdb

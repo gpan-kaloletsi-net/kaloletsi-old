@@ -1,0 +1,334 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{41201C48-1EC8-482E-B677-C68FF1CA078F}</ProjectGuid>
+    <ProjectTypeGuids>{F85E285D-A4E0-4152-9332-AB1D724D3325};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>gpp</RootNamespace>
+    <AssemblyName>gpp</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <SilverlightApplicationList>{CAC5A693-089C-423E-9F58-BE1B894CB2A6}|..\XPythSlv\XPythSlv.csproj|ClientBin|False</SilverlightApplicationList>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UseIISExpress>false</UseIISExpress>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Abstractions">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Web.Routing">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.Mobile" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controllers\AdminController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\PhotoController.cs" />
+    <Compile Include="Controllers\SapController.cs" />
+    <Compile Include="Helpers\JsonImageResult.cs" />
+    <Compile Include="Helpers\ImageHelper.cs" />
+    <Compile Include="Helpers\LangViewEngine.cs" />
+    <Compile Include="Models\Album.cs" />
+    <Compile Include="Models\Car.cs" />
+    <Compile Include="Models\Photo.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Photo.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Models\PhotoManager.cs" />
+    <Compile Include="Models\XAlbum.cs" />
+    <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\ImageResult.cs" />
+    <Compile Include="Models\XPhoto.cs" />
+    <Compile Include="Models\XPhotoManager.cs" />
+    <Compile Include="Models\PhotoSize.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <None Include="Web.config">
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\jquery-1.3.2.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.3.2-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.3.2.min-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\MicrosoftAjax.js" />
+    <Content Include="Scripts\MicrosoftAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.js" />
+    <Content Include="Scripts\MicrosoftMvcAjax.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.debug.js" />
+    <Content Include="Scripts\MicrosoftMvcValidation.js" />
+    <Content Include="Views\Account\ChangePassword.aspx" />
+    <Content Include="Views\Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Views\Account\LogOn.aspx" />
+    <Content Include="Views\Account\Register.aspx" />
+    <Content Include="Views\Home\About.aspx" />
+    <Content Include="Views\Home\Index.aspx" />
+    <Content Include="Views\Shared\Error.aspx" />
+    <Content Include="Views\Shared\LogOnUserControl.ascx" />
+    <Content Include="Views\Shared\Site.Master" />
+    <Content Include="Views\Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Data\personal-add.sql" />
+    <Content Include="App_Data\personal-remove.sql" />
+    <Content Include="App_Data\Personal.mdf">
+    </Content>
+    <Content Include="App_Data\Personal_log.ldf">
+      <DependentUpon>Personal.mdf</DependentUpon>
+    </Content>
+    <Content Include="Images\placeholder-100.jpg" />
+    <Content Include="Images\placeholder-200.jpg" />
+    <Content Include="Images\placeholder-600.jpg" />
+    <Content Include="Images\resume-photo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Images\album-bstretch.gif" />
+    <Content Include="App_Themes\White\Images\album-l1.gif" />
+    <Content Include="App_Themes\White\Images\album-l2.gif" />
+    <Content Include="App_Themes\White\Images\album-l3.gif" />
+    <Content Include="App_Themes\White\Images\album-l4.gif" />
+    <Content Include="Images\album-lstretch.gif" />
+    <Content Include="App_Themes\White\Images\album-mbl.gif" />
+    <Content Include="App_Themes\White\Images\album-mbr.gif" />
+    <Content Include="App_Themes\White\Images\album-mtl.gif" />
+    <Content Include="App_Themes\White\Images\album-mtr.gif" />
+    <Content Include="App_Themes\White\Images\album-r1.gif" />
+    <Content Include="App_Themes\White\Images\album-r2.gif" />
+    <Content Include="App_Themes\White\Images\album-r3.gif" />
+    <Content Include="App_Themes\White\Images\album-r4.gif" />
+    <Content Include="Images\album-rstretch.gif" />
+    <Content Include="Images\album-tstretch.gif" />
+    <Content Include="App_Themes\White\Images\background.gif" />
+    <Content Include="App_Themes\White\Images\body-repeat-photo.gif" />
+    <Content Include="App_Themes\White\Images\body-repeat.gif" />
+    <Content Include="Images\bullet-1.gif" />
+    <Content Include="Images\bullet-2.gif" />
+    <Content Include="App_Themes\White\Images\button-add.gif" />
+    <Content Include="App_Themes\White\Images\button-cancel.gif" />
+    <Content Include="App_Themes\White\Images\button-create.gif" />
+    <Content Include="App_Themes\White\Images\button-delete.gif" />
+    <Content Include="App_Themes\White\Images\button-download.gif" />
+    <Content Include="App_Themes\White\Images\button-dwn_res.gif" />
+    <Content Include="App_Themes\White\Images\button-edit.gif" />
+    <Content Include="App_Themes\White\Images\button-first.gif" />
+    <Content Include="App_Themes\White\Images\button-gallery.gif" />
+    <Content Include="App_Themes\White\Images\button-import.gif" />
+    <Content Include="App_Themes\White\Images\button-insert.gif" />
+    <Content Include="App_Themes\White\Images\button-last.gif" />
+    <Content Include="App_Themes\White\Images\button-login.gif" />
+    <Content Include="App_Themes\White\Images\button-next.gif" />
+    <Content Include="App_Themes\White\Images\button-play.gif" />
+    <Content Include="App_Themes\White\Images\button-prev.gif" />
+    <Content Include="App_Themes\White\Images\button-rename.gif" />
+    <Content Include="App_Themes\White\Images\button-save.gif" />
+    <Content Include="App_Themes\White\Images\button-tog24.gif" />
+    <Content Include="App_Themes\White\Images\button-tog8.gif" />
+    <Content Include="App_Themes\White\Images\content-shim-none.gif" />
+    <Content Include="App_Themes\White\Images\content-shim-photo.gif" />
+    <Content Include="App_Themes\White\Images\content-shim-stretch.gif" />
+    <Content Include="App_Themes\White\Images\content-shim.gif" />
+    <Content Include="App_Themes\White\Images\footer-side.gif" />
+    <Content Include="App_Themes\White\Images\footer.gif" />
+    <Content Include="App_Themes\White\Images\frame-bot--x.gif" />
+    <Content Include="App_Themes\White\Images\frame-bot-x-.gif" />
+    <Content Include="App_Themes\White\Images\frame-botx--.gif" />
+    <Content Include="App_Themes\White\Images\frame-mid--x.gif" />
+    <Content Include="App_Themes\White\Images\frame-midx--.gif" />
+    <Content Include="App_Themes\White\Images\frame-top--x.gif" />
+    <Content Include="App_Themes\White\Images\frame-top-x-.gif" />
+    <Content Include="App_Themes\White\Images\frame-topx--.gif" />
+    <Content Include="App_Themes\White\Images\header.gif" />
+    <Content Include="Images\photonav-bg.gif" />
+    <Content Include="Images\photonav-top-bg.gif" />
+    <Content Include="App_Themes\White\Images\spacer.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Frame.css" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\Default.skin" />
+    <Content Include="Images\frame-bot--x.gif" />
+    <Content Include="Images\frame-bot-x-.gif" />
+    <Content Include="Images\frame-botx--.gif" />
+    <Content Include="Images\frame-mid--x.gif" />
+    <Content Include="Images\frame-midx--.gif" />
+    <Content Include="Images\frame-top--x.gif" />
+    <Content Include="Images\frame-top-x-.gif" />
+    <Content Include="Images\frame-topx--.gif" />
+    <Content Include="Images\SandF.jpg" />
+    <Content Include="Videos\AnnualLeaving.swf" />
+    <Content Include="Videos\FIDocuments.swf" />
+    <Content Include="Videos\Symbasi1.swf" />
+    <Content Include="Videos\Symbasi2.swf" />
+    <Content Include="Views\Admin\Index.aspx" />
+    <Content Include="Views\Admin\Photos.aspx" />
+    <Content Include="Views\Home\Kaloletsi.aspx" />
+    <Content Include="Views\Photo\Album.aspx" />
+    <Content Include="Views\Photo\Index.aspx" />
+    <Content Include="Views\Photo\Details.aspx" />
+    <Content Include="Views\Photo\Download.aspx" />
+    <Content Include="Views\Sap\Index.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Photo.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Photo.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Models\Photo.dbml.layout">
+      <DependentUpon>Photo.dbml</DependentUpon>
+    </None>
+    <Content Include="Views\Error\Http404.aspx" />
+    <Content Include="Views\Sap\Index_el.aspx" />
+    <Content Include="Views\Shared\Site_el.Master" />
+    <Content Include="Images\greece-sm.gif" />
+    <Content Include="Images\greece-sm30.GIF" />
+    <Content Include="Images\uk_S.gif" />
+    <Content Include="Images\uk_S30.GIF" />
+    <Content Include="jquery-1.3.2.min.js" />
+    <Content Include="SiteMap.xml" />
+    <Content Include="Views\Home\About_el.aspx" />
+    <Content Include="Views\Home\Kaloletsi_el.aspx" />
+    <Content Include="Views\Home\Index_el.aspx" />
+    <Content Include="Views\Photo\Index_el.aspx" />
+    <Content Include="Views\Photo\NotFound.aspx" />
+    <Content Include="XWeb.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ClientBin\PythSlv.xap" />
+    <Content Include="Images\arrv_white_2.gif" />
+    <Content Include="Scripts\scrollsaver.min.js" />
+    <Content Include="Scripts\Silverlight.js" />
+    <Content Include="Silverlight.js" />
+    <Content Include="Views\Error\App_LocalResources\Http404.aspx.resx">
+    </Content>
+    <Content Include="Views\Home\Map_el.aspx" />
+    <Content Include="Views\Home\Map.aspx" />
+    <Content Include="Views\Home\Pythagoras.aspx" />
+    <Content Include="Views\Home\TestJSON.aspx" />
+    <Content Include="Views\Shared\Error_el.aspx" />
+    <Content Include="PythSlvTestPage.aspx" />
+    <Content Include="PythSlvTestPage.html" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Upload\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target> -->
+  <Target Name="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(ProjectDir)\..\$(ProjectName)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2625</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>
+          </IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

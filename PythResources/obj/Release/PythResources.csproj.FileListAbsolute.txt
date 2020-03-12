@@ -1,0 +1,5 @@
+C:\edata\Projects.CLR\Gpan.Site\PythResources\Bin\Release\PythResources.dll
+C:\edata\Projects.CLR\Gpan.Site\PythResources\Bin\Release\PythResources.pdb
+C:\edata\Projects.CLR\Gpan.Site\PythResources\obj\Release\PythResources.g.resources
+C:\edata\Projects.CLR\Gpan.Site\PythResources\obj\Release\PythResources.dll
+C:\edata\Projects.CLR\Gpan.Site\PythResources\obj\Release\PythResources.pdb

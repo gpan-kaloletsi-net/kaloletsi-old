@@ -1,0 +1,16 @@
+e:\MVCpsite\gpp\gpp\bin\gpp.dll
+e:\MVCpsite\gpp\gpp\bin\gpp.pdb
+e:\MVCpsite\gpp\gpp\bin\System.Web.Mvc.dll
+e:\MVCpsite\gpp\gpp\bin\System.Web.Mvc.xml
+e:\MVCpsite\gpp\gpp\obj\Debug\ResolveAssemblyReference.cache
+e:\MVCpsite\gpp\gpp\obj\Debug\gpp.dll
+e:\MVCpsite\gpp\gpp\obj\Debug\gpp.pdb
+e:\MVCpsite\gpp\gpp\obj\Debug\gpp.Properties.Resources.resources
+e:\MVCpsite\gpp\gpp\obj\Debug\gpp.csproj.GenerateResource.Cache
+C:\EData\Projects.CLR\Gpan.Site\gpp\bin\gpp.dll
+C:\EData\Projects.CLR\Gpan.Site\gpp\bin\gpp.pdb
+C:\EData\Projects.CLR\Gpan.Site\gpp\obj\Debug\gpp.csprojResolveAssemblyReference.cache
+C:\EData\Projects.CLR\Gpan.Site\gpp\obj\Debug\gpp.Properties.Resources.resources
+C:\EData\Projects.CLR\Gpan.Site\gpp\obj\Debug\gpp.csproj.GenerateResource.Cache
+C:\EData\Projects.CLR\Gpan.Site\gpp\obj\Debug\gpp.dll
+C:\EData\Projects.CLR\Gpan.Site\gpp\obj\Debug\gpp.pdb

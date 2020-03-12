@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="Photo">
+  <DataContextMoniker Name="/PhotoDataContext" />
+  <nestedChildShapes>
+    <classShape Id="71fcce93-0fa4-46fa-bb5a-dd7d14db1ff4" absoluteBounds="0.75, 1.25, 2, 1.2718163928389548">
+      <DataClassMoniker Name="/PhotoDataContext/Album" />
+      <nestedChildShapes>
+        <elementListCompartment Id="636ac038-443c-46fa-b669-08fd6ed156d6" absoluteBounds="0.765, 1.71, 1.9700000000000002, 0.71181639283895493" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <classShape Id="ee96e117-ef1a-4092-9f53-cc1b0d2a2238" absoluteBounds="3.5, 0.875, 2, 1.9392642975846925">
+      <DataClassMoniker Name="/PhotoDataContext/Photo" />
+      <nestedChildShapes>
+        <elementListCompartment Id="33cd7b07-eb43-4597-82ff-8ec57dc844a0" absoluteBounds="3.515, 1.335, 1.9700000000000002, 1.3792642975846925" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+      </nestedChildShapes>
+    </classShape>
+    <associationConnector edgePoints="[(2.75 : 1.88590819641948); (3.5 : 1.88590819641948)]" fixedFrom="NotFixed" fixedTo="NotFixed">
+      <AssociationMoniker Name="/PhotoDataContext/Album/Album_Photo" />
+      <nodes>
+        <classShapeMoniker Id="71fcce93-0fa4-46fa-bb5a-dd7d14db1ff4" />
+        <classShapeMoniker Id="ee96e117-ef1a-4092-9f53-cc1b0d2a2238" />
+      </nodes>
+    </associationConnector>
+  </nestedChildShapes>
+</ordesignerObjectsDiagram>

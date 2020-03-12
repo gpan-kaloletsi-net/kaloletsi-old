@@ -1,0 +1,11 @@
+e:\MVCpsite\gpp\PythResources\Bin\Debug\PythResources.dll
+e:\MVCpsite\gpp\PythResources\Bin\Debug\PythResources.pdb
+e:\MVCpsite\gpp\PythResources\obj\Debug\ResolveAssemblyReference.cache
+e:\MVCpsite\gpp\PythResources\obj\Debug\PythResources.g.resources
+e:\MVCpsite\gpp\PythResources\obj\Debug\PythResources.dll
+e:\MVCpsite\gpp\PythResources\obj\Debug\PythResources.pdb
+C:\EData\Projects.CLR\Gpan.Site\PythResources\Bin\Debug\PythResources.dll
+C:\EData\Projects.CLR\Gpan.Site\PythResources\Bin\Debug\PythResources.pdb
+C:\EData\Projects.CLR\Gpan.Site\PythResources\obj\Debug\PythResources.g.resources
+C:\EData\Projects.CLR\Gpan.Site\PythResources\obj\Debug\PythResources.dll
+C:\EData\Projects.CLR\Gpan.Site\PythResources\obj\Debug\PythResources.pdb

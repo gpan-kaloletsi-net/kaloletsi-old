@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Database Name="Personal" Class="PhotoDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\SQLEXPRESS;AttachDbFilename=|DataDirectory|\Personal.mdf;Integrated Security=True;User Instance=True" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="PersonalConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Albums" Member="Albums">
+    <Type Name="Album">
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsPublic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="Album_Photo" Member="Photos" ThisKey="AlbumID" OtherKey="AlbumID" Type="Photo" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Photos" Member="Photos">
+    <Type Name="Photo">
+      <Column Name="PhotoID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BytesOriginal" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BytesFull" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BytesPoster" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Column Name="BytesThumb" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" UpdateCheck="Never" />
+      <Association Name="Album_Photo" Member="Album" ThisKey="AlbumID" OtherKey="AlbumID" Type="Album" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Function Name="dbo.AddAlbum" Method="AddAlbum">
+    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.RemovePhoto" Method="RemovePhoto">
+    <Parameter Name="PhotoID" Parameter="photoID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.AddPhoto" Method="AddPhoto">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="BytesOriginal" Parameter="bytesOriginal" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="BytesFull" Parameter="bytesFull" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="BytesPoster" Parameter="bytesPoster" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Parameter Name="BytesThumb" Parameter="bytesThumb" Type="System.Data.Linq.Binary" DbType="Image" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditAlbum" Method="EditAlbum">
+    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.EditPhoto" Method="EditPhoto">
+    <Parameter Name="Caption" Parameter="caption" Type="System.String" DbType="NVarChar(50)" />
+    <Parameter Name="PhotoID" Parameter="photoID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+  <Function Name="dbo.GetAlbums" Method="GetAlbums">
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetAlbumsResult">
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="IsPublic" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="NumberOfPhotos" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetFirstPhoto" Method="GetFirstPhoto">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Size" Parameter="size" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetFirstPhotoResult">
+      <Column Name="BytesThumb" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetNonEmptyAlbums" Method="GetNonEmptyAlbums">
+    <ElementType Name="GetNonEmptyAlbumsResult">
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetPhoto" Method="GetPhoto">
+    <Parameter Name="PhotoID" Parameter="photoID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="Size" Parameter="size" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetPhotoResult">
+      <Column Name="BytesThumb" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetPhotos" Method="GetPhotos">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Parameter Name="IsPublic" Parameter="isPublic" Type="System.Boolean" DbType="Bit" />
+    <ElementType Name="GetPhotosResult">
+      <Column Name="PhotoID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="AlbumID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Caption" Type="System.String" DbType="NVarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="BytesOriginal" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="BytesFull" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="BytesPoster" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="BytesThumb" Type="System.Data.Linq.Binary" DbType="Image NOT NULL" CanBeNull="false" />
+      <Column Name="AlbumID1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Caption1" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="IsPublic" Type="System.Boolean" DbType="Bit" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.RemoveAlbum" Method="RemoveAlbum">
+    <Parameter Name="AlbumID" Parameter="albumID" Type="System.Int32" DbType="Int" />
+    <Return Type="System.Int32" />
+  </Function>
+</Database>
